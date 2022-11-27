@@ -1,0 +1,1 @@
+export { HiddenOnTabletAndDown } from './HiddenOnTabletAndDown'

@@ -2,10 +2,11 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 import { COLORS, WEIGHTS } from '../../constants';
+import { HiddenOnTabletAndDown } from '../HiddenOnTabletAndDown';
 
 const Sidebar = () => {
   return (
-    <Wrapper>
+    <HiddenOnTabletAndDown>
       <Link href="/lifestyle">Lifestyle</Link>
       <Link href="/jordan">Jordan</Link>
       <ActiveLink href="/running">Running</ActiveLink>
@@ -19,11 +20,9 @@ const Sidebar = () => {
       <Link href="/tennis">Tennis</Link>
       <Link href="/athletics">Athletics</Link>
       <Link href="/walking">Walking</Link>
-    </Wrapper>
+    </HiddenOnTabletAndDown>
   );
 };
-
-const Wrapper = styled.aside``;
 
 const Link = styled.a`
   display: block;
