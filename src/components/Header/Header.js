@@ -59,6 +59,7 @@ const MainHeader = styled.div`
   padding: 18px 32px;
   height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+  overflow: scroll;
   
   @media (${MEDIA_QUERIES.phoneOnly}) {
     align-items: center;
@@ -68,7 +69,11 @@ const MainHeader = styled.div`
 
 const Nav = styled.nav`
   display: flex;
-  gap: 48px;
+  gap: clamp(
+    1rem,
+    7vw - 3.25rem,
+    3rem
+  );
   margin: 0 48px;
 
   @media (${MEDIA_QUERIES.tabletAndDown}) {
